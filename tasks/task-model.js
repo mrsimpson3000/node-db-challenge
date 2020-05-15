@@ -17,3 +17,7 @@ function find() {
     .from("tasks")
     .join("projects", "tasks.project_id", "=", "projects.id");
 }
+
+function add(resource) {
+  return db("resources").insert(resource);
+}

@@ -14,4 +14,16 @@ router.get("/", (req, res) => {
     });
 });
 
+router.post("/", (req, res) => {
+  const taskData = req.body;
+
+  Tasks.add(taskData)
+    .then((task) => {
+      res.status(201).json(task);
+    })
+    .catch((err) => {
+      res.status(500).json({ error: err.message });
+    });
+});
+
 module.exports = router;
