@@ -39,12 +39,16 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
+      This question confuses me as I thought that SQL databases were usually Relational Databases and NoSQL databases were called non-relational or distributed databases. Aren't we using SQL to develop all our Realtional Databases? We use software like SQLite and Postgres to create and manage the relational database.
 
 - [ ] Why do tables need a `primary key`?
+      The primary key allows you to access each row individually. The values must be unique.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
+      This key you are referring to is called a Foreign key
 
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+      We would need to have another table in between them with a foreign key referencing each of the two tables.
 
 ## Minimum Viable Product
 
