@@ -25,12 +25,9 @@ router.post("/", isValidProject, (req, res) => {
         res.status(500).json({ error: err.message });
       });
   } else {
-    res
-      .status(400)
-      .json({
-        message:
-          "You must include the project name. Please include the project name and try again.",
-      });
+    res.status(400).json({
+      message: "You must include the project name.",
+    });
   }
 });
 
