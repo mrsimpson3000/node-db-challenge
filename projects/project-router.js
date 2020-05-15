@@ -14,4 +14,24 @@ router.get("/", (req, res) => {
     });
 });
 
+router.post("/", isValidProject, (req, res) => {
+  const projectData = req.body;
+  if (isValidProject(projectData)) {
+    Projects.add(projectData)
+      .then((project) => {
+        res.status(201).json(project);
+      })
+      .catch((err) => {
+        res.status(500).json({ error: err.message });
+      });
+  } else {
+    res
+      .status(400)
+      .json({
+        message:
+          "You must include the project name. Please include the project name and try again.",
+      });
+  }
+});
+
 module.exports = router;
